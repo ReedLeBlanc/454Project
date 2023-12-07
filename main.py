@@ -2,6 +2,8 @@
 
 
 def flip_bits(binary_string):
+    
+    #if there is only one lightbulb you just turn on or off accordingly
     if(len(binary_string) == 1):
         if binary_string == "0":
             return "1"
