@@ -30,7 +30,7 @@ def flip_bits(binary_string):
     else:
         flip_bulbs[0] = '0'
 
-    #second index switched
+    # updating second index after above switch press
     if flip_bulbs[1] == '0':
         flip_bulbs[1] = '1'
     else:
