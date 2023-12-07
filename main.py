@@ -90,13 +90,16 @@ def flip_bits(binary_string):
         print("Bulbs result:", flip_bulbs_result)
         return ''.join(flip_switches)
     else:
-        return "Does not exist"
+        print("Cannot turn on all bulbs, but to get the most on:")
 
-    #return flip_bulbs_result, noflip_bulbs_result
+        return ''.join(flip_switches), ''.join(noflip_switches)
+        #return flip_bulbs_result, noflip_bulbs_result
+
+
 
 if __name__ == '__main__':
 
-    test_string = '100011010'
+    test_string = '10100'
     print("Switches pressed:", flip_bits(test_string))
 
 
