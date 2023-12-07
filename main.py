@@ -96,7 +96,7 @@ def flip_bits(binary_string):
 
 if __name__ == '__main__':
 
-    test_string = '11'
+    test_string = '100011010'
     print("Switches pressed:", flip_bits(test_string))
 
 
