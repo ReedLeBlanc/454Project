@@ -99,6 +99,7 @@ def flip_bits(binary_string):
 
 if __name__ == '__main__':
 
+    #when testing keep in mind there may be multiple solutions to one problem
     test_string = '10100'
     print("Switches pressed:", flip_bits(test_string))
 
