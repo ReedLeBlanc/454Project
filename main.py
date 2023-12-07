@@ -10,19 +10,21 @@ def flip_bits(binary_string):
         else:
             return "0"
             
-    # here we are building the string that shows what bulbs we are pressing, i.e. first case starts with 10000 other with 00000
+    # here we are initializing the string that shows what bulbs are going to be pressed, i.e. first case starts with 00000 other with 10000
     noflip = '0' * len(binary_string)
     flip = '1' + '0' * (len(binary_string) - 1)
 
+    # turning above binary string into list so we can actually modify it
     noflip_switches = list(noflip)
     flip_switches = list(flip)
 
+    # making two copies of the starting bulbs state
     noflip_bulbs = list(binary_string)
     flip_bulbs = list(binary_string)
 
     #print("Before switch:",flip_bulbs)
 
-    #first index switched
+    # pressing first switch for the "flip" run
     if flip_bulbs[0] == '0':
         flip_bulbs[0] = '1'
     else:
@@ -37,7 +39,7 @@ def flip_bits(binary_string):
     #print("After switch:", flip_bulbs)
 
 
-    # iterate over flip bulb set
+    # iterating over flip bulb set i.e. left to right
     for i in range(1, len(flip_bulbs)):
 
         # if prev bit is 0
@@ -54,7 +56,8 @@ def flip_bits(binary_string):
                     flip_bulbs[i+1] = '1'
                 else:
                     flip_bulbs[i+1] = '0'
-
+                    
+    # iterating over noflip bulb set i.e. left to right
     for i in range(1, len(noflip_bulbs)):
         #print(noflip_bulbs)
 
