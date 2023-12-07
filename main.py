@@ -3,13 +3,14 @@
 
 def flip_bits(binary_string):
     
-    #if there is only one lightbulb you just turn on or off accordingly
+    # if there is only one lightbulb you just turn on or off accordingly
     if(len(binary_string) == 1):
         if binary_string == "0":
             return "1"
         else:
             return "0"
-
+            
+    # here we are building the string that shows what bulbs we are pressing, i.e. first case starts with 10000 other with 00000
     noflip = '0' * len(binary_string)
     flip = '1' + '0' * (len(binary_string) - 1)
 
